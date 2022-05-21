@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen:wght@400&display=swap');
+
+body  {
+  background-image: url("background.png");
+  }
+h1 {
+  color: darkgreen;
+	font-size: 37px;
+	font-family: 'Koulen', sans-serif;
+}
+
+h2 {
+  color: seagreen;
+	font-size: 25px;
+	font-family: 'Koulen', sans-serif;
+}
+p {
+  color: black;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+}
+ div{
+	text-align:center;
+	text-justify:values;
+}
+#introduction{
+	height: 60%;
+	position:sticky;
+	top:0;
+}
+
+ .container{
+	display: flex;
+
+ }
+
+
+ @media (max-width: 960px) {
+	/* For a screen < 960px, this CSS will be read */
+	.card-white{
+	  flex-direction: row;
+	}
+	 .container{
+		display: flex;
+	    align-items: center;
+		flex-direction: column;
+	 }
+	 #introduction{
+		 position: inherit;
+		 height:inherit;
+	 }
+	 
+  }
+
+ .card-white{
+ 	background-color: white;
+	max-width:70vw;
+    border-radius: 5px;
+    text-align: justify-all;
+    margin: 20px;
+	display: flex;
+	justify-content: center;
+  	align-items: center;
+  	flex-direction: column;
+}
+
+
+
+ul{
+	list-style-type: none;
+}
+
+#icon_social{
+	text-decoration: none;
+	color: black;
+}
