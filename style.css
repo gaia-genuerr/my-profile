@@ -1,0 +1,188 @@
+/* General styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Container centering */
+.container {
+    width: 80%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Card styling with initial load animation */
+.card-white {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 0.5s ease-out forwards;
+    transition: box-shadow 0.3s ease;
+    width: 100%; /* Ensures card takes the full width of the container */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+/* Animation keyframes */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover effect using transition */
+.card-white:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* Optional: Increases shadow for depth effect */
+}
+
+/* Profile header with flexbox */
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: start; /* Align items to the start of the container */
+    gap: 20px;
+}
+
+/* Profile text styling */
+.profile-text {
+    text-align: right; /* Align text to the right */
+    flex-grow: 1; /* Allow the text container to grow as needed */
+}
+
+
+/* Profile image styling */
+.profile-img {
+    object-fit: cover;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+}
+
+/* Title styling */
+.title {
+    color: #1E4D92; /* Updated to a deep, modern blue */
+    font-weight: 700;
+}
+
+
+/* Horizontal list styling */
+.list-inline {
+    list-style: none;
+    padding-left: 0;
+}
+
+.list-inline > li {
+    display: inline;
+    padding: 0 10px;
+}
+
+.list-inline > i {
+    font-size: 40px;
+}
+
+/* Font Awesome Icons */
+.fa {
+    font-size: 2em;
+    color: #555;
+}
+
+/* Link styling */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Footer styling with flexbox */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #eaeaea;
+}
+
+#vie-associative{
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center; /* Centers children horizontally */
+}
+
+#vie-associative > div{
+    display: flex;
+    justify-content: center; /* Centers the div horizontally */
+    /* Additional styling as needed */
+}
+
+.button-blue{
+    background-color: #575db4;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.button-blue:hover{
+    background-color: #1E4D92;
+}
+
+
+.img-sport {
+    display: flex; /* Use flexbox to layout children */
+    justify-content: space-around; /* Evenly distribute space around items */
+    align-items: center; /* Align items vertically in the center */
+    flex-wrap: wrap; /* Allow items to wrap as needed */
+    gap: 10px; /* Optional: Add space between images */
+}
+
+.img-sport div {
+    flex: 1; /* Each child div will grow equally */
+    max-width: calc(33.333% - 10px); /* Optional: Max width for each image, accounting for gap */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.img-sport img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area of div without stretching the image */
+}
+
+
+/* Media Queries */
+@media (max-width: 960px) {
+    .container {
+        width: 700px;
+    }
+}
+
+@media (max-width: 720px) {
+    .container {
+        width: 500px;
+    }
+}
+
+@media (max-width: 540px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+
